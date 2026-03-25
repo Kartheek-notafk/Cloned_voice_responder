@@ -1,12 +1,3 @@
-"""
-Voice Assistant — Groq (LLaMA3) + Coqui XTTS v2 (local, unlimited, CUDA)
-Type your question → get an answer in a cloned voice (100% offline TTS)
-Responses are saved as numbered WAV files in the 'responses/' folder.
-
-Usage:
-    python main.py --sample path/to/voice_sample.wav
-"""
-
 import argparse
 import os
 import shutil
@@ -20,7 +11,7 @@ from TTS.api import TTS
 
 
 # ── Config ────────────────────────────────────────────────────────────────────
-GROQ_API_KEY   = os.environ.get("GROQ_API_KEY", "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")
+GROQ_API_KEY   = os.environ.get("GROQ_API_KEY", "git said to remove it(*ps use ur own groq api)")
 GROQ_MODEL     = "llama-3.3-70b-versatile"
 
 SYSTEM_PROMPT  = (
@@ -30,9 +21,8 @@ SYSTEM_PROMPT  = (
 )
 
 XTTS_MODEL     = "tts_models/multilingual/multi-dataset/xtts_v2"
-LANGUAGE       = "en"        # change if needed: "hi", "es", "fr", "te" etc.
+LANGUAGE       = "en"
 RESPONSES_DIR  = Path("responses")   # folder where WAV files are saved
-# ──────────────────────────────────────────────────────────────────────────────
 
 
 def detect_device() -> str:
