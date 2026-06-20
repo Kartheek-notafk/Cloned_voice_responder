@@ -13,6 +13,7 @@ from TTS.api import TTS
 # ── Config ────────────────────────────────────────────────────────────────────
 GROQ_API_KEY   = os.environ.get("GROQ_API_KEY", "git said to remove it(*ps use ur own groq api)")
 GROQ_MODEL     = "llama-3.3-70b-versatile"
+# 70B model is the largest available, but you can use smaller models like "llama-3.3-13b" or "llama-3.3-7b" if you want faster responses and lower cost.
 
 SYSTEM_PROMPT  = (
     "You are a helpful, conversational assistant. "
